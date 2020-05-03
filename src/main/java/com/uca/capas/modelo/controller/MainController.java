@@ -29,6 +29,7 @@ public class MainController {
 			mav.setViewName("/index");
 		}
 		else { 
+			mav.addObject("producto", producto);
 			mav.setViewName("/result");
 		}
 		return mav;
