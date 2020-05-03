@@ -6,15 +6,24 @@ import javax.validation.constraints.Size;
 
 public class Product {
 
-	@Size(min = 0, max = 12, message = "El codigo debe tener 12 digitos")
+	//@Size(min = 0, max = 12, message = "El codigo debe tener 12 digitos")
 	int id;
 	
-	@Size(min = 1, max = 100, message = "el nombre debe tener de uno a cien caracteres")
+	//@Size(min = 1, max = 100, message = "el nombre debe tener de uno a cien caracteres")
 	String nombre;
 	
-	@NotNull(message = "Debe ingresar una cantidad")
+	//@NotNull(message = "Debe ingresar una cantidad")
 	Integer cantidad;
 	
+	public Product() {
+		
+	}
+
+	public Product(int id, String nombre, Integer cantidad) {
+		this.id = id;
+		this.nombre = nombre;
+		this.cantidad = cantidad;
+	}
 
 	public int getId() {
 		return id;
@@ -32,11 +41,11 @@ public class Product {
 		this.nombre = nombre;
 	}
 
-	public Integer getExistencias() {
+	public Integer getCantidad() {
 		return cantidad;
 	}
 
-	public void setExistencias(Integer existencias) {
+	public void setCantidad(Integer existencias) {
 		this.cantidad = existencias;
 	}
 
